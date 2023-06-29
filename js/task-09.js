@@ -11,6 +11,6 @@ function getRandomHexColor() {
 
 function getNewBodyColor() {
   const colorEl = getRandomHexColor();
-  bodyEl.style.backgroundColor = "colorEl";
+  document.body.style.backgroundColor = colorEl;
   txtName.textContent = colorEl;
 }
