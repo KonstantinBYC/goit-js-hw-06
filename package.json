@@ -1,0 +1,19 @@
+{
+  "name": "goit-js-hw-06",
+  "version": "1.0.0",
+  "description": "npm list --depth=0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm create --index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "s"
+  },
+  "keywords": [
+    "s"
+  ],
+  "author": "s",
+  "license": "UNLICENSED",
+  "devDependencies": {}
+}
