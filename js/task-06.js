@@ -9,11 +9,17 @@ function onInput(evt) {
     console.log(
       Number(inputEl.dataset.length) === evt.currentTarget.value.length
     );
-    this.classList.remove("invalid");
+
     this.classList.add("valid");
   } else {
-    this.classList.remove("valid");
     this.classList.add("invalid");
     alert("Невірна кількість символів");
   }
 }
+
+inputEl.addEventListener("change", (evt) => {
+  evt.preventDefault();
+  console.log(inputEl.value);
+  input.reset();
+  onInput.textContent = "";
+});

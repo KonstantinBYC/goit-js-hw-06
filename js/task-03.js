@@ -22,20 +22,18 @@ images.forEach((image, index) => {
   const newImage = document.createElement("img");
 
   newImageLi.append(newImage);
+  newImageLi.classList.add("gallery-item");
+  newImageLi.style.display = "inline";
+  newImageLi.style.marginRight = "10px";
   newImage.src = image.url;
   newImage.alt = image.alt;
-  newImage.width = 320;
-  newImage.height = 190;
-  newImageLi.classList.add("gallery-item");
+  newImage.width = 640;
+  newImage.height = 400;
 });
-imagesUl.style.listStyle = none;
-imagesUl.insertAdjacentElement("afterbegin");
+const createGallItem = ({ url, alt }) =>
+  `<li><a href="#"> <img src="${url}" alt="${alt}"> </a> </li>`;
+const galleryMarkUp = images.map(createGallItem).join("");
 
-// const createGallItem = ({ url, alt }) =>
-//   `<li><a href="#"> <img src="${url}" alt="${alt}"> </a> </li>`;
+console.log(galleryMarkUp);
 
-// const galleryMarkUp = images.map(createGallItem).join("");
-// console.log(galleryMarkUp);
-// const galleryEl = document.querySelector(".gallery");
-
-// galleryEl.insertAdjacentElement("afterbegin", galleryMarkUp);
+imagesUl.insertAdjacentElement("afterbegin", galleryMarkUp);
